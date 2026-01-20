@@ -1,0 +1,18 @@
+/// Constantes globales de la aplicación
+class AppConstants {
+  // API
+  static const String supabaseUrl = 'YOUR_SUPABASE_URL';
+  static const String supabaseAnonKey = 'YOUR_SUPABASE_ANON_KEY';
+  
+  // Timeouts
+  static const Duration apiTimeout = Duration(seconds: 30);
+  
+  // Rutas
+  static const String homeRoute = '/';
+  static const String productsRoute = '/products';
+  static const String productDetailRoute = '/products/:id';
+  static const String cartRoute = '/cart';
+  static const String authRoute = '/auth';
+  static const String loginRoute = '/login';
+  static const String registerRoute = '/register';
+}
