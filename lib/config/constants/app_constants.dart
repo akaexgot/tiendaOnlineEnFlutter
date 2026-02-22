@@ -1,8 +1,10 @@
+import 'package:flutter_dotenv/flutter_dotenv.dart';
+
 /// Constantes globales de la aplicación
 class AppConstants {
-  // API
-  static const String supabaseUrl = 'YOUR_SUPABASE_URL';
-  static const String supabaseAnonKey = 'YOUR_SUPABASE_ANON_KEY';
+  // Supabase
+  static String get supabaseUrl => dotenv.env['SUPABASE_URL'] ?? '';
+  static String get supabaseAnonKey => dotenv.env['SUPABASE_ANON_KEY'] ?? '';
   
   // Timeouts
   static const Duration apiTimeout = Duration(seconds: 30);
@@ -15,4 +17,8 @@ class AppConstants {
   static const String authRoute = '/auth';
   static const String loginRoute = '/login';
   static const String registerRoute = '/register';
+
+  // Stripe
+  static String get stripeSecretKey => dotenv.env['STRIPE_SECRET_KEY'] ?? '';
+  static String get stripePublishableKey => dotenv.env['STRIPE_PUBLISHABLE_KEY'] ?? ''; 
 }

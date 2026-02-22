@@ -15,7 +15,7 @@ class AppTextField extends StatefulWidget {
   final VoidCallback? onSuffixIconPressed;
 
   const AppTextField({
-    Key? key,
+    super.key,
     required this.label,
     this.hint,
     this.controller,
@@ -27,7 +27,7 @@ class AppTextField extends StatefulWidget {
     this.prefixIcon,
     this.suffixIcon,
     this.onSuffixIconPressed,
-  }) : super(key: key);
+  });
 
   @override
   State<AppTextField> createState() => _AppTextFieldState();

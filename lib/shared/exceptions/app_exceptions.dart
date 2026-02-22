@@ -15,33 +15,33 @@ abstract class AppException implements Exception {
 /// Excepción para errores de servidor
 class ServerException extends AppException {
   ServerException({
-    required String message,
-    String? code,
-  }) : super(message: message, code: code);
+    required super.message,
+    super.code,
+  });
 }
 
 /// Excepción para errores de conexión
 class NetworkException extends AppException {
   NetworkException({
-    required String message,
-    String? code,
-  }) : super(message: message, code: code);
+    required super.message,
+    super.code,
+  });
 }
 
 /// Excepción para datos no encontrados
 class NotFoundException extends AppException {
   NotFoundException({
-    required String message,
-    String? code,
-  }) : super(message: message, code: code);
+    required super.message,
+    super.code,
+  });
 }
 
 /// Excepción para errores de autenticación
 class AuthException extends AppException {
   AuthException({
-    required String message,
-    String? code,
-  }) : super(message: message, code: code);
+    required super.message,
+    super.code,
+  });
 }
 
 /// Clase para representar fallos

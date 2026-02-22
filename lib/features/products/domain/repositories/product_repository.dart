@@ -1,18 +1,42 @@
-/// Interfaz del repositorio de productos
-/// Define QUÉ hace el repositorio, no CÓMO lo hace
+import '../../data/models/product_model.dart';
+import '../../data/models/category_model.dart';
+
+/// Abstract repository interface for products
 abstract class ProductRepository {
-  /// Obtiene la lista de todos los productos
-  // Future<List<Product>> getProducts();
-  
-  /// Obtiene un producto por ID
-  // Future<Product> getProductById(String id);
-  
-  /// Crea un nuevo producto
-  // Future<Product> createProduct(Product product);
-  
-  /// Actualiza un producto existente
-  // Future<Product> updateProduct(String id, Product product);
-  
-  /// Elimina un producto
-  // Future<void> deleteProduct(String id);
+  /// Get all products with optional filters
+  Future<List<ProductModel>> getProducts({
+    int? categoryId,
+    bool? isFeatured,
+    bool? isOffer,
+    bool activeOnly = true,
+    int? limit,
+    int offset = 0,
+  });
+
+  /// Get a single product by ID
+  Future<ProductModel?> getProductById(int id);
+
+  /// Get a single product by slug
+  Future<ProductModel?> getProductBySlug(String slug);
+
+  /// Search products by name
+  Future<List<ProductModel>> searchProducts(String query);
+
+  /// Get featured products
+  Future<List<ProductModel>> getFeaturedProducts({int limit = 6});
+
+  /// Get offer products
+  Future<List<ProductModel>> getOfferProducts({int limit = 10});
+
+  /// Get products by category
+  Future<List<ProductModel>> getProductsByCategory(int categoryId, {int? limit});
+
+  /// Get all categories
+  Future<List<CategoryModel>> getCategories();
+
+  /// Get category by ID
+  Future<CategoryModel?> getCategoryById(int id);
+
+  /// Get category by slug
+  Future<CategoryModel?> getCategoryBySlug(String slug);
 }

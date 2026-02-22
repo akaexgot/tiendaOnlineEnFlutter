@@ -1,4 +1,4 @@
-name: tiendaflutter
+name: slc_cuts
 description: "A new Flutter project."
 # The following line prevents the package from being accidentally published to
 # pub.dev using `flutter pub publish`. This is preferred for private packages.
@@ -31,20 +31,58 @@ dependencies:
   flutter:
     sdk: flutter
 
-  # The following adds the Cupertino Icons font to your application.
-  # Use with the CupertinoIcons class for iOS style icons.
+  # Icons
   cupertino_icons: ^1.0.8
+
+  # Backend - Supabase
+  supabase_flutter: ^2.8.0
+
+  # State Management - Riverpod
+  flutter_riverpod: ^2.6.1
+  riverpod_annotation: ^2.6.1
+  flutter_dotenv: ^5.2.1
+
+  # Routing
+  go_router: ^14.6.0
+
+  # Data Models
+  freezed_annotation: ^2.4.4
+  json_annotation: ^4.9.0
+
+  # Local Storage (Cart)
+  hive: ^2.2.3
+  hive_flutter: ^1.1.0
+
+  # UI Helpers
+  cached_network_image: ^3.4.1
+  shimmer: ^3.0.0
+  flutter_staggered_grid_view: ^0.7.0
+  carousel_slider: ^5.0.0
+  badges: ^3.1.2
+  intl: ^0.19.0
+  google_fonts: ^6.2.1
+  fl_chart: ^0.66.0
+  web: ^1.1.0
+  flutter_stripe: ^11.1.0
+  http: ^1.2.0
+  url_launcher: ^6.2.4
+  image_picker: ^1.2.1
+  file_picker: ^10.3.10
+  csv: ^6.0.0
+  universal_html: ^2.2.4
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
 
-  # The "flutter_lints" package below contains a set of recommended lints to
-  # encourage good coding practices. The lint set provided by the package is
-  # activated in the `analysis_options.yaml` file located at the root of your
-  # package. See that file for information about deactivating specific lint
-  # rules and activating additional ones.
+  # Lints
   flutter_lints: ^5.0.0
+
+  # Code Generation
+  build_runner: ^2.4.13
+  freezed: ^2.5.7
+  json_serializable: ^6.8.0
+  riverpod_generator: ^2.6.2
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
@@ -58,9 +96,10 @@ flutter:
   uses-material-design: true
 
   # To add assets to your application, add an assets section, like this:
-  # assets:
-  #   - images/a_dot_burr.jpeg
-  #   - images/a_dot_ham.jpeg
+  assets:
+    - .env
+    - assets/images/logo.png
+    - assets/images/logo_white.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images

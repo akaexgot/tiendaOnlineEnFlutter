@@ -1,4 +1,4 @@
-package com.tienda.tiendaflutter
+package com.slccuts.app
 
 import io.flutter.embedding.android.FlutterActivity
 
